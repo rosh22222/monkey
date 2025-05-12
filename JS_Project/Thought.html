@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thought of the day generator</title>
+  <style>
+    body {
+      background-color: #cfdaf7;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .quote-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    blockquote {
+      font-size: 1.2rem;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    .author {
+      font-style: italic;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons button, .buttons a {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a {
+      background-color: white;
+      color: #4a90e2;
+      border: 1px solid #4a90e2;
+    }
+
+    .buttons button:hover, .buttons a:hover {
+      background-color: #357ab8;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box">
+    <h2>Thought of the day</h2>
+    <blockquote id="quote">“It’s easy to stand with the crowd, but it takes courage to stand alone.” </blockquote>
+    <div class="author" id="author">— Mahatma Gandhi</div>
+    <div class="buttons">
+      <button onclick="newQuote()">New Thought</button>
+      <a href="#" id="tweetBtn" target="_blank">Tweet</a>
+    </div>
+  </div>
+
+  <script>
+    const quotes = [
+      {
+        quote: "It’s easy to stand with the crowd, but it takes courage to stand alone.",
+        author: " Mahatma Gandhi"
+      },
+      {
+        quote: "Success is not how high you have climbed, but how you make a positive difference to the world.",
+        author: "Roy T. Bennett"
+      },
+      {
+        quote: "We cannot always build the future for our youth, but we can build our youth for the future.",
+        author: "Franklin D. Roosevelt"
+      },
+      {
+        quote: "Life is 10% what happens to us and 90% how we react to it.",
+        author: "Charles R. Swindoll"
+      }
+    ];
+
+    function newQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = `"${quotes[random].quote}"`;
+      document.getElementById('author').textContent = `— ${quotes[random].author}`;
+      document.getElementById('tweetBtn').href =
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(quotes[random].quote + " — " + quotes[random].author)}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshni| Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">&lt; Roshni /&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="toggle-theme">🌙</button></li>
+        </ul>
+    </nav>
+    
+
+    <section class="hero" id="home">
+        <h1>Hey <span class="wave">👋</span>, I'm <span class="highlight">Roshni</span></h1>
+        <h2>I'm a <span class="highlight-blue">UI/UX Developer</span></h2>
+        <p>You've stumbled upon my little heaven on the web; <br>Welcome and feel at home!</p>
+    </section>
+    <!-------------------------about--------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                <img src="pic.png">
+            </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Results-driven FrontendDeveloper with expertise in React, Redux, and CSS-in-JS solutions. 
+                        proven track record of delivering high-quality web application on time. Skilled in web design, 
+                        accessibility, and performance optimization. Excited to leverage my skills to contribute to 
+                        the development of innovatioe web solutions. </p>
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                            
+                            
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX Developer</span><br>Web app deveopment</li>
+                                <li><span>Front-end Development</span><br>React</li>
+                                <li><span>Web performance</span><br>optimize website performance</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                            <ul>
+                                <li><span>2025-current</span><br>Tech Mahindra</li>
+                                <li><span>2025</span><br>Online Course</li>
+                                <li><span>2024</span><br>Online Course</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                            <ul>
+                                <li><span>2020</span><br>BCA at Vikram Dev University</li>
+                                <li><span>2024</span><br>MSc in CS at Vikram Dev University</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-links");
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+        }
+    </script>
+    
+    <!-- --------services------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                    <h2>UI/UX development</h2>
+                    <p>UI/UX Developer (Beginner)
+                        As a passionate and detail-oriented beginner UI/UX Developer, I focus on creating intuitive and visually appealing user interfaces.
+                        I bring ideas to life using HTML, CSS, and JavaScript. My goal is to craft digital experiences that are not only functional but also delightful to use.
+                        </p>
+                    <a href="clone">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Developer</h2>
+                    <p>I'm an enthusiastic and self-motivated beginner Frontend Developer with a strong interest in building user-friendly web interfaces.
+                         I am working with HTML, CSS, and JavaScript. I enjoy turning design mockups into clean, interactive, and accessible websites. 
+                    </p>
+                    <a href="">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web application</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ut animi consectetur! Nisi cum voluptatum asperiores sint aperiam rerum sequi perferendis aliquam! Dignissimos a natus pariatur consectetur hic totam maiores?</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-------------------projects---------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Social media refers to online
+                         platforms where users can share 
+                         information and connect with virtual 
+                        communities through text, video, photos,
+                         and other content.</p>
+                    <a href="social-media/index (16).html"><i class="fa-solid fa-link"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.png">
+                <div class="layer">
+                    <h3>Music Website</h3>
+                    <p>Music have the power of relaxation. Listen music and enjoy. </p>
+                    <a href="Music-website/music.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-3.png">
+                <div class="layer">
+                        <h3>Coffee order</h3>
+                        <p>Enjoy your cup of coffee. Dopomine of your life.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>  
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+
+<!-------------------JS-projects---------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">JS-Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="social-media/digi.png">
+                <div class="layer">
+                    <h3>Digital Clock</h3>
+                    <p>a clock in which the hours, minutes, and sometimes seconds are indicated by digits, rather than by hands on a dia.</p>
+                    <a href="JS_Project\digital_clock\clock.html"><i class="fa-solid fa-link"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="social-media/thought.png" width="100%">
+                <div class="layer">
+                    <h3>Thought Of The Day!</h3>
+                    <p>These thoughts are typically designed to brighten someone's day and encourage a more positive mindset.  </p>
+                    <a href="JS_Project\Thought.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">  
+            </div>
+        </div>
+        <a href="" class="btn">See More</a>
+    </div>
+</div>
+<!--------------contact------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>mroshini32@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9178072701</p>
+
+                <div class="social-icons">
+                    <h1 class="text-white font-semibold font-openSans">Get in Touch</h1>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/roshni-m-349397229"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/rosh22222"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright made by Roshni. <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+     
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+    
+</script>
+</body>
+</html>
+

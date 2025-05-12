@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media App</title>
+  <!-- <link rel="stylesheet" href="style1.css"> -->
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic layout and styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  header {
+    background-color: hsl(345, 63%, 34%);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Post Section */
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .post {
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-avatar {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .post-content {
+    margin: 15px 0;
+    font-size: 16px;
+    font-style: oblique bold;
+  }
+  
+  .post-image {
+    width: 50%;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .like-btn, .comment-btn {
+    background-color: hsl(345, 63%, 34%);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .like-btn:hover, .comment-btn:hover {
+    background-color: hsl(345, 63%, 34%);
+  }
+  
+  .comments-section {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .comment-input {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+  }
+  
+  .submit-comment-btn {
+    background-color: hsl(345, 63%, 34%);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-comment-btn:hover {
+    background-color:hsl(345, 63%, 34%) ;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">Demogram</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="content">
+    <div class="post">
+      <div class="user-info">
+        <img class="user-avatar" src="profile.png" width="20" alt="User Avatar">
+        <div class="user-name">Darsh</div>
+      </div>
+      <p class="post-content">Good Morning <br> Have a Nice Day! </p>
+      <img class="post-image" src="lot.png" width="40"alt="Post Image">
+      <div class="post-actions">
+        <button class="like-btn">❤️ Like</button>
+        <button class="comment-btn">💬 Comment</button>
+      </div>
+      <div class="comments-section">
+        <input class="comment-input" type="text" placeholder="Write a comment...">
+        <button class="submit-comment-btn">Post</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
